@@ -5,85 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-  .tabs {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
+    .scroll-container {
+      display: flex;
+      gap: 15px;
+      overflow-x: auto; /* enables horizontal scroll */
+      scroll-behavior: smooth;
 
-  .tab-btn {
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    background: #eee;
-    border-radius: 6px;
-  }
+      /* Hide scrollbar */
+      scrollbar-width: none; /* Firefox */
+    }
 
-  .tab-btn.active {
-    background: #333;
-    color: white;
-  }
+    .scroll-container::-webkit-scrollbar {
+      display: none; /* Chrome, Safari */
+    }
 
+    .card {
+      width: clamp(180px, 25vw, 300px);
+      height: clamp(140px, 20vw, 220px);
 
-  .tab-content.active {
-    display: block;
-  }
-
-  .tab-content {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-
-  .tab-content.active {
-    display: block;
-    opacity: 1;
-  }
+      background: #eee;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
   </style>
 </head>
-
 <body>
-  <div class="tabs">
-    <button class="tab-btn active" data-tab="1">Overview</button>
-    <button class="tab-btn" data-tab="2">Features</button>
-    <button class="tab-btn" data-tab="3">Pricing</button>
+  <div class="scroll-container">
+    <div class="card">Card 1</div>
+    <div class="card">Card 2</div>
+    <div class="card">Card 3</div>
+    <div class="card">Card 4</div>
+    <div class="card">Card 5</div>
   </div>
-
-  <div class="tab-content active" id="tab-1">
-    <p>This is the overview section.</p>
-  </div>
-
-  <div class="tab-content" id="tab-2">
-    <p>These are the features.</p>
-  </div>
-
-  <div class="tab-content" id="tab-3">
-    <p>Here is the pricing.</p>
-  </div>
-
-  <script>
-    const buttons = document.querySelectorAll(".tab-btn");
-    const contents = document.querySelectorAll(".tab-content");
-
-    buttons.forEach(button => {
-      button.addEventListener("click", () => {
-        
-        // Remove active from all buttons
-        buttons.forEach(btn => btn.classList.remove("active"));
-        
-        // Hide all content
-        contents.forEach(content => content.classList.remove("active"));
-        
-        // Activate clicked button
-        button.classList.add("active");
-        
-        // Show corresponding content
-        const tabId = button.getAttribute("data-tab");
-        document.getElementById("tab-" + tabId).classList.add("active");
-      });
-    });
-  </script>
-
 </body>
-
 </html>

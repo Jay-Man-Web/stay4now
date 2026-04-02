@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>stay4now</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <div class="search-bar">
-      <input class="search-input" type="text" placeholder="Search">
+    <div class="search-bar-container">
+      <input class="search-bar" type="text" placeholder="Search">
     </div>
     <div class="header-tabs">
       <button class="tab-btn active" data-tab="houses">
@@ -26,10 +27,206 @@
 
   <main>
     <section class="tab-content active" id="houses-section">
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur alias atque excepturi, ullam at fuga optio, omnis eius itaque fugiat deleniti dicta magnam a sit obcaecati nesciunt, aliquam harum vitae?</p>
+      <div class="sub-section">
+        <div class="section-title-container">
+          <h2 class="section-title">
+            <a class="section-title-link" href="">
+              Popular Homes
+            </a>
+          </h2>
+        </div>
+        <div class="section-content">
+          <div class="property-container">
+            <div class="property-thumbnail-container">
+              <img class="property-thumbnail" src="images/home-thumbnails/0001.png" alt="no image">
+            </div>
+            <div class="property-details-container">
+              <p class="property-label">
+                Hotel in Cape Town City Centre
+              </p>
+              <p class="property-price-rating">
+                R<span class="property-price">2,678</span> for 2 nights &middot;&starf; <span class="property-rating">4.6</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="property-container">
+            <div class="property-thumbnail-container">
+              <img class="property-thumbnail" src="images/home-thumbnails/0002.png" alt="no image">
+            </div>
+            <div class="property-details-container">
+              <p class="property-label">
+                Apartment in Midrand
+              </p>
+              <p class="property-price-rating">
+                R<span class="property-price">3,600</span> for 2 nights &middot;&starf; <span class="property-rating">3.8</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="property-container">
+            <div class="property-thumbnail-container">
+              <img class="property-thumbnail" src="images/home-thumbnails/0003.png" alt="no image">
+            </div>
+            <div class="property-details-container">
+              <p class="property-label">
+                Guesthouse in Roordeport
+              </p>
+              <p class="property-price-rating">
+                R<span class="property-price">1,487</span> for 2 nights &middot;&starf; <span class="property-rating">2.9</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="property-container">
+            <div class="property-thumbnail-container">
+              <img class="property-thumbnail" src="images/home-thumbnails/0001.jpg" alt="no image">
+            </div>
+            <div class="property-details-container">
+              <p class="property-label">
+                Hotel in Cape Town City Centre
+              </p>
+              <p class="property-price-rating">
+                R<span class="property-price">2,678</span> for 2 nights &middot;&starf; <span class="property-rating">4.5</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="property-container">
+            <div class="property-thumbnail-container">
+              <img class="property-thumbnail" src="images/home-thumbnails/0001.jpg" alt="no image">
+            </div>
+            <div class="property-details-container">
+              <p class="property-label">
+                Hotel in Cape Town City Centre
+              </p>
+              <p class="property-price-rating">
+                R<span class="property-price">2,678</span> for 2 nights &middot;&starf; <span class="property-rating">4.5</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="property-container">
+            <div class="property-thumbnail-container">
+              <img class="property-thumbnail" src="images/home-thumbnails/0001.jpg" alt="no image">
+            </div>
+            <div class="property-details-container">
+              <p class="property-label">
+                Hotel in Cape Town City Centre
+              </p>
+              <p class="property-price-rating">
+                R<span class="property-price">2,678</span> for 2 nights &middot;&starf; <span class="property-rating">4.5</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-section">
+        <div class="section-title-container">
+          <h2 class="section-title">
+            <a class="section-title-link" href="">
+              Newer Available Homes
+            </a>
+          </h2>
+        </div>
+        <div class="section-content">
+          <div class="property-container">
+            <div class="property-thumbnail-container">
+              <img class="property-thumbnail" src="images/home-thumbnails/0005.png" alt="no image">
+            </div>
+            <div class="property-details-container">
+              <p class="property-label">
+                Hotel in Cape Town City Centre
+              </p>
+              <p class="property-price-rating">
+                R<span class="property-price">2,678</span> for 2 nights &middot;&starf; <span class="property-rating">4.6</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="property-container">
+            <div class="property-thumbnail-container">
+              <img class="property-thumbnail" src="images/home-thumbnails/0006.png" alt="no image">
+            </div>
+            <div class="property-details-container">
+              <p class="property-label">
+                Apartment in Midrand
+              </p>
+              <p class="property-price-rating">
+                R<span class="property-price">3,600</span> for 2 nights &middot;&starf; <span class="property-rating">3.8</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="property-container">
+            <div class="property-thumbnail-container">
+              <img class="property-thumbnail" src="images/home-thumbnails/0007.png" alt="no image">
+            </div>
+            <div class="property-details-container">
+              <p class="property-label">
+                Guesthouse in Roordeport
+              </p>
+              <p class="property-price-rating">
+                R<span class="property-price">1,487</span> for 2 nights &middot;&starf; <span class="property-rating">2.9</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="property-container">
+            <div class="property-thumbnail-container">
+              <img class="property-thumbnail" src="images/home-thumbnails/0001.jpg" alt="no image">
+            </div>
+            <div class="property-details-container">
+              <p class="property-label">
+                Hotel in Cape Town City Centre
+              </p>
+              <p class="property-price-rating">
+                R<span class="property-price">2,678</span> for 2 nights &middot;&starf; <span class="property-rating">4.5</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="property-container">
+            <div class="property-thumbnail-container">
+              <img class="property-thumbnail" src="images/home-thumbnails/0001.jpg" alt="no image">
+            </div>
+            <div class="property-details-container">
+              <p class="property-label">
+                Hotel in Cape Town City Centre
+              </p>
+              <p class="property-price-rating">
+                R<span class="property-price">2,678</span> for 2 nights &middot;&starf; <span class="property-rating">4.5</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="property-container">
+            <div class="property-thumbnail-container">
+              <img class="property-thumbnail" src="images/home-thumbnails/0001.jpg" alt="no image">
+            </div>
+            <div class="property-details-container">
+              <p class="property-label">
+                Hotel in Cape Town City Centre
+              </p>
+              <p class="property-price-rating">
+                R<span class="property-price">2,678</span> for 2 nights &middot;&starf; <span class="property-rating">4.5</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="tab-content" id="experiences-section">
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur alias atque excepturi, ullam at fuga optio, omnis eius itaque fugiat deleniti dicta magnam a sit obclorem  aecati nesciunt, aliquam harum vitae? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem autem officia deserunt, dicta recusandae ratione optio quos ipsum, iusto exercitationem cupiditate, illo incidunt consequuntur debitis ex tempore! Quibusdam, quaerat possimus.</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur alias atque excepturi, ullam at fuga optio, omnis eius itaque fugiat deleniti dicta magnam a sit obclorem  aecati nesciunt, aliquam harum vitae? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem autem officia deserunt, dicta recusandae ratione optio quos ipsum, iusto exercitationem cupiditate, illo incidunt consequuntur debitis ex tempore! Quibusdam, quaerat possimus.</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur alias atque excepturi, ullam at fuga optio, omnis eius itaque fugiat deleniti dicta magnam a sit obclorem  aecati nesciunt, aliquam harum vitae? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem autem officia deserunt, dicta recusandae ratione optio quos ipsum, iusto exercitationem cupiditate, illo incidunt consequuntur debitis ex tempore! Quibusdam, quaerat possimus.</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur alias atque excepturi, ullam at fuga optio, omnis eius itaque fugiat deleniti dicta magnam a sit obclorem  aecati nesciunt, aliquam harum vitae? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem autem officia deserunt, dicta recusandae ratione optio quos ipsum, iusto exercitationem cupiditate, illo incidunt consequuntur debitis ex tempore! Quibusdam, quaerat possimus.</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur alias atque excepturi, ullam at fuga optio, omnis eius itaque fugiat deleniti dicta magnam a sit obclorem  aecati nesciunt, aliquam harum vitae? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem autem officia deserunt, dicta recusandae ratione optio quos ipsum, iusto exercitationem cupiditate, illo incidunt consequuntur debitis ex tempore! Quibusdam, quaerat possimus.</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur alias atque excepturi, ullam at fuga optio, omnis eius itaque fugiat deleniti dicta magnam a sit obclorem  aecati nesciunt, aliquam harum vitae? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem autem officia deserunt, dicta recusandae ratione optio quos ipsum, iusto exercitationem cupiditate, illo incidunt consequuntur debitis ex tempore! Quibusdam, quaerat possimus.</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur alias atque excepturi, ullam at fuga optio, omnis eius itaque fugiat deleniti dicta magnam a sit obclorem  aecati nesciunt, aliquam harum vitae? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem autem officia deserunt, dicta recusandae ratione optio quos ipsum, iusto exercitationem cupiditate, illo incidunt consequuntur debitis ex tempore! Quibusdam, quaerat possimus.</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur alias atque excepturi, ullam at fuga optio, omnis eius itaque fugiat deleniti dicta magnam a sit obclorem  aecati nesciunt, aliquam harum vitae? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem autem officia deserunt, dicta recusandae ratione optio quos ipsum, iusto exercitationem cupiditate, illo incidunt consequuntur debitis ex tempore! Quibusdam, quaerat possimus.</p>
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur alias atque excepturi, ullam at fuga optio, omnis eius itaque fugiat deleniti dicta magnam a sit obclorem  aecati nesciunt, aliquam harum vitae? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem autem officia deserunt, dicta recusandae ratione optio quos ipsum, iusto exercitationem cupiditate, illo incidunt consequuntur debitis ex tempore! Quibusdam, quaerat possimus.</p>
     </section>
 
@@ -38,7 +235,23 @@
     </section>
   </main>
 
-  <footer></footer>
+  <footer>
+    <div>
+      <p><div><img src="images/icons/globe.svg" alt=""></div>English</p>
+      <p>ZAR</p>
+    </div>
+    <div class="media-links">
+      <div class="footer-icon-container"><img src="images/icons/facebook.svg" alt=""></div>
+      <div class="footer-icon-container"><img src="images/icons/instagram.svg" alt=""></div>
+      <div class="footer-icon-container"><img src="images/icons/whatsapp.svg" alt=""></div>
+    </div>
+    <div>
+      <p>&copy 2026 stay4now</p>
+    </div>
+    <div>
+      <a href="">Privacy</a> &middot; <a href="">Terms</a>
+    </div>
+  </footer>
 
   <script src="scripts/script.js"></script>
 </body>
