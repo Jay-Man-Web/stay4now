@@ -17,6 +17,7 @@ header {
   left: 0;
   background: white;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.132);
+  height: 105px;
 }
 
 .search-bar-container {
