@@ -61,12 +61,14 @@ header {
   cursor: pointer;
   background: none;
   font-size: 16px;
-  transition: background 2s;
+  transition: font-size 0.2s;
 }
 
 .tab-btn.active {
   background: linear-gradient(white 75%, rgba(143, 2, 143, 0.547));
   color: linear-gradient(black, white);
+  font-size: 20px;
+  padding: 9px 0;
 }
 
 .tab-content {
