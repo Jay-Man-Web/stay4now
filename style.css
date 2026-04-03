@@ -36,7 +36,7 @@ header {
 }
 
 .search-bar:focus {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(221, 86, 255, 0.319);
   outline: none;
 }
 
@@ -44,7 +44,7 @@ header {
   display: flex;
   justify-content: center; 
   gap: 5px;
-  flex-wrap: wrap; 
+  /*flex-wrap: wrap;*/ 
   margin-bottom: 0;
   padding-bottom: 0;
 }
@@ -99,11 +99,12 @@ main {
 
 .section-content {
   display: flex;
-  gap: 20px;
+  gap: 5px;
   overflow-x: auto;
   scroll-behavior: smooth;
   scrollbar-width: none;
   flex-wrap: nowrap;
+  padding-right:20px;
 }
 
 .section-content::-webkit-scrollbar {
@@ -112,8 +113,14 @@ main {
 
 .property-container {
   width: clamp(250px, 25vw, 300px);
-  border-radius: 10px;
+  border-radius: 20px;
+  padding: 10px;
   flex-shrink: 0;
+  transition: background  0.15s;
+}
+
+.property-container:hover {
+  background: rgb(234, 206, 232);
 }
 
 .property-container:hover {
