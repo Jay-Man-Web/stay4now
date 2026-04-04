@@ -4,13 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>stay4now</title>
-  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/houses-section.css">
+  <link rel="stylesheet" href="styles/search-results.css">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
   <header>
     <div class="search-bar-container">
-      <input class="search-bar" type="text" placeholder="Have a place in mind?">
+      <input class="search-bar" id="searchInput" type="text" placeholder="Have a place in mind?">
     </div>
     <div class="header-tabs">
       <button class="tab-btn active" data-tab="houses">
@@ -26,6 +28,8 @@
   </header>
 
   <main>
+    <div id="search-results-container">
+    </div>
     <section class="tab-content active" id="houses-section">
       <div class="sub-section">
         <div class="section-title-container">
@@ -82,15 +86,7 @@
     </section>
 
     <section class="tab-content" id="reviews-section">
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur alias atque excepturi, ullam at fuga optio, omnis eius itaque fugiat deleniti dicta magnam a sit obclorem  aecati nesciunt, aliquam harum vitae? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem autem officia deserunt, dicta recusandae ratione optio quos ipsum, iusto exercitationem cupiditate, illo incidunt consequuntur debitis ex tempore! Quibusdam, quaerat possimus.</p>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur alias atque excepturi, ullam at fuga optio, omnis eius itaque fugiat deleniti dicta magnam a sit obclorem  aecati nesciunt, aliquam harum vitae? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem autem officia deserunt, dicta recusandae ratione optio quos ipsum, iusto exercitationem cupiditate, illo incidunt consequuntur debitis ex tempore! Quibusdam, quaerat possimus.</p>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur alias atque excepturi, ullam at fuga optio, omnis eius itaque fugiat deleniti dicta magnam a sit obclorem  aecati nesciunt, aliquam harum vitae? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem autem officia deserunt, dicta recusandae ratione optio quos ipsum, iusto exercitationem cupiditate, illo incidunt consequuntur debitis ex tempore! Quibusdam, quaerat possimus.</p>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur alias atque excepturi, ullam at fuga optio, omnis eius itaque fugiat deleniti dicta magnam a sit obclorem  aecati nesciunt, aliquam harum vitae? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem autem officia deserunt, dicta recusandae ratione optio quos ipsum, iusto exercitationem cupiditate, illo incidunt consequuntur debitis ex tempore! Quibusdam, quaerat possimus.</p>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur alias atque excepturi, ullam at fuga optio, omnis eius itaque fugiat deleniti dicta magnam a sit obclorem  aecati nesciunt, aliquam harum vitae? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem autem officia deserunt, dicta recusandae ratione optio quos ipsum, iusto exercitationem cupiditate, illo incidunt consequuntur debitis ex tempore! Quibusdam, quaerat possimus.</p>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur alias atque excepturi, ullam at fuga optio, omnis eius itaque fugiat deleniti dicta magnam a sit obclorem  aecati nesciunt, aliquam harum vitae? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem autem officia deserunt, dicta recusandae ratione optio quos ipsum, iusto exercitationem cupiditate, illo incidunt consequuntur debitis ex tempore! Quibusdam, quaerat possimus.</p>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur alias atque excepturi, ullam at fuga optio, omnis eius itaque fugiat deleniti dicta magnam a sit obclorem  aecati nesciunt, aliquam harum vitae? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem autem officia deserunt, dicta recusandae ratione optio quos ipsum, iusto exercitationem cupiditate, illo incidunt consequuntur debitis ex tempore! Quibusdam, quaerat possimus.</p>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur alias atque excepturi, ullam at fuga optio, omnis eius itaque fugiat deleniti dicta magnam a sit obclorem  aecati nesciunt, aliquam harum vitae? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem autem officia deserunt, dicta recusandae ratione optio quos ipsum, iusto exercitationem cupiditate, illo incidunt consequuntur debitis ex tempore! Quibusdam, quaerat possimus.</p>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur alias atque excepturi, ullam at fuga optio, omnis eius itaque fugiat deleniti dicta magnam a sit obclorem  aecati nesciunt, aliquam harum vitae? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem autem officia deserunt, dicta recusandae ratione optio quos ipsum, iusto exercitationem cupiditate, illo incidunt consequuntur debitis ex tempore! Quibusdam, quaerat possimus.</p>
+      
     </section>
 
     <section class="tab-content" id="services-section">
@@ -100,24 +96,40 @@
 
   <footer>
     <div>
-      <p><div><img src="images/icons/globe.svg" alt=""></div>English</p>
+      <p>
+        <div>
+          <img src="images/icons/globe.svg" alt="">
+        </div>
+        English
+      </p>
       <p>ZAR</p>
     </div>
+
     <div class="media-links">
-      <div class="footer-icon-container"><img src="images/icons/facebook.svg" alt=""></div>
-      <div class="footer-icon-container"><img src="images/icons/instagram.svg" alt=""></div>
-      <div class="footer-icon-container"><img src="images/icons/whatsapp.svg" alt=""></div>
+      <div class="footer-icon-container">
+        <img src="images/icons/facebook.svg" alt="facebook">
+      </div>
+      <div class="footer-icon-container">
+        <img src="images/icons/instagram.svg" alt="instagram">
+      </div>
+      <div class="footer-icon-container">
+        <img src="images/icons/whatsapp.svg" alt="whatsapp">
+      </div>
     </div>
+
     <div>
-      <p>&copy 2026 stay4now</p>
+      <p>&copy 2026 stay4now, Inc.</p>
     </div>
+
     <div>
       <a href="">Privacy</a> &middot; <a href="">Terms</a>
     </div>
   </footer>
 
   <script src="scripts/script.js"></script>
-  <script src="scripts/houses-section.js"></script>
+  <script type="module" src="scripts/search.js"></script>
+  <script type="module" src="scripts/houses-section.js"></script>
+  <script src="scripts/reviews-section.js"></script>
   
 </body>
 </html>
