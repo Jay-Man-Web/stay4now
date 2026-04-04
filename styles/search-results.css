@@ -57,3 +57,11 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+@media (width <= 1080px) {
+  .result-thumbnail-container {
+    width: 100px;
+    height: 100px;
+    
+  }
+}
