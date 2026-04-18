@@ -1,0 +1,91 @@
+/* Houses Section */
+
+.sub-section {
+  margin: 0 0 65px 30px;
+}
+
+.section-title-container {
+  margin-bottom: 25px;
+  a {
+    text-decoration: none;
+  }
+}
+
+.section-content {
+  display: flex;
+  gap: 5px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  flex-wrap: nowrap;
+  padding-right:20px;
+}
+
+.section-content::-webkit-scrollbar {
+  display: none;
+}
+
+.property-container {
+  width: clamp(180px, 25vw, 300px);
+  border-radius: 20px;
+  padding: 10px;
+  flex-shrink: 0;
+  transition: background  0.15s;
+}
+
+.property-container:hover {
+  background: rgb(234, 206, 232);
+}
+
+.property-container:hover {
+  box-shadow: #333;
+}
+
+.property-thumbnail-container {
+  width: clamp(180px, 25vw, 300px);
+  height: clamp(18 0px, 25vw, 300px);
+  border-radius: 18px;
+}
+
+.property-thumbnail {
+  width: 100%;
+  border-radius: 18px;
+}
+
+.property-details-container {
+  margin-top: 10px;
+}
+
+.property-label {
+  font-size: 18px;
+}
+
+.property-price-rating {
+  color: rgb(82, 82, 82);
+  font-size: 15px;
+}
+
+footer {
+  background: rgb(242, 242, 242);
+  padding: 30px;
+  img {
+    width: 100%;
+  }
+  p {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+  }
+  div{
+    margin: 10px 0;
+  }
+  div div {
+    width: 20px;
+    height: 20px;
+    display: inline-grid;
+    margin-right: 5px;
+  }
+  a {
+    text-decoration: none;
+  }
+}

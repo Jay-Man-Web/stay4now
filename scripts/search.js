@@ -6,6 +6,7 @@ function displayResults(results, value){
   const container = document.getElementById("search-results-container");
 
   if (results.length === 0) {
+    document.getElementById("houses-section").style.display = "none";
     container.innerHTML = "<p>No results found.</p>";
     return;
   }
@@ -16,6 +17,7 @@ function displayResults(results, value){
     const price = (house.priceCents / 100).toFixed(0);
 
     HTML += `
+    <div>
       <div class="search-result">
         <div class="result-thumbnail-container">
           <img class="result-thumbnail" src="images/home-thumbnails/${house.thumbnailID}.png" alt="no image" class="result-thumbnail">
@@ -32,6 +34,7 @@ function displayResults(results, value){
           </p>
         </div>
       </div>
+    </div>
     `;
   });
 
