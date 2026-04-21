@@ -1,0 +1,191 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+main {
+  height: 100%;
+}
+
+.content {
+  padding: 60px 20px 0 20px;
+}
+
+h2 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.back-btn {
+  background: rgb(255, 190, 255);
+  padding: 10px 15px;
+  width: 60px;
+  border-radius: 14px;
+  position: fixed;
+  margin: 10px;
+
+  a{
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.favourite-btn {
+  padding: 10px;
+  background: rgb(255, 190, 255);
+  position: fixed;
+  right: 0;
+  margin: 10px;
+  border-radius: 14px;
+}
+
+
+.details {
+  text-align: center;
+  h1 {
+    margin: 10px 0;
+  }
+  p {
+    color: rgb(50, 50, 50);
+  }
+}
+
+.host {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px rgba(153, 153, 153, 0.348) solid;
+}
+
+.host-img-container {
+  width: clamp(70px, 10vw, 150px);
+  height: clamp(70px, 10vw, 150px);
+  margin: 10px;
+  img {
+    border-radius: 50%;
+  }
+}
+
+.host-name {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.hosting-period {
+  color: rgb(33, 33, 33);
+}
+
+
+.amenities {
+  font-size: 18px;
+  list-style-type: none;
+  line-height: 38px;
+
+  li::before{
+    content: "🛠  ";
+  }
+}
+
+.map {
+  p {
+    margin-bottom: 15px;
+  }
+  iframe {
+    border-radius: 20px;
+  }
+}
+
+body {
+  padding-bottom: 80px;
+}
+
+.booking {
+  z-index: 100;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: rgb(221, 221, 221);
+  padding: 10px 40px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: center;
+  align-items: center;
+  p{
+    font-size: 18px;
+  }
+} 
+
+.reserve-btn {
+  height: 60px;
+  font-size: 20px;
+  border: none;
+  border-radius: 50px;
+  background: rgb(0, 0, 0);
+  color: white;
+  transition: opacity 0.15s;
+}
+
+.reserve-btn:hover {
+  opacity: 0.8;
+}
+/*  Content at "More stays Nearby" */
+
+.section-content {
+  display: flex;
+  gap: 5px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  flex-wrap: nowrap;
+  padding-right:20px;
+}
+
+.section-content::-webkit-scrollbar {
+  display: none;
+}
+
+.property-container {
+  width: clamp(180px, 25vw, 300px);
+  border-radius: 20px;
+  padding: 10px;
+  flex-shrink: 0;
+  transition: background  0.15s;
+}
+
+.property-container:hover {
+  background: rgb(234, 206, 232);
+}
+
+.property-container:hover {
+  box-shadow: #333;
+}
+
+.property-thumbnail-container {
+  width: clamp(180px, 25vw, 300px);
+  height: clamp(18 0px, 25vw, 300px);
+  border-radius: 18px;
+}
+
+.property-thumbnail {
+  width: 100%;
+  border-radius: 18px;
+}
+
+.property-details-container {
+  margin-top: 10px;
+}
+
+.property-label {
+  font-size: 18px;
+}
+
+.property-price-rating {
+  color: rgb(82, 82, 82);
+  font-size: 15px;
+}
+

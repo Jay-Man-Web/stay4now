@@ -18,7 +18,7 @@ function displayResults(results, value){
 
     HTML += `
     <div>
-      <div class="search-result">
+      <a href="../pages/home-details.html?id=${house.id}" class="search-result">
         <div class="result-thumbnail-container">
           <img class="result-thumbnail" src="images/home-thumbnails/${house.thumbnailID}.png" alt="no image" class="result-thumbnail">
         </div>
@@ -33,7 +33,7 @@ function displayResults(results, value){
             R${price} for 2 nights · ★ ${house.rating}
           </p>
         </div>
-      </div>
+      </a>
     </div>
     `;
   });

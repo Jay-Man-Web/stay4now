@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>House Details</title>
+</head>
+<body>
+
+  <a href="index.html">← Back</a>
+
+  <div id="details"></div>
+
+  <script>
+    const houses = [
+      {
+        id: 1,
+        title: "Modern Apartment",
+        price: 1200,
+        location: "Johannesburg",
+        description: "Modern and clean apartment."
+      },
+      {
+        id: 2,
+        title: "Beach House",
+        price: 2500,
+        location: "Cape Town",
+        description: "Ocean views and fresh air."
+      }
+    ];
+
+    // STEP 1: Get ID from URL
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    // STEP 2: Find matching house
+    const house = houses.find(h => h.id == id);
+
+    // STEP 3: Display it
+    const container = document.getElementById("details");
+
+    if (house) {
+      container.innerHTML = `
+        <h1>${house.title}</h1>
+        <p><strong>Location:</strong> ${house.location}</p>
+        <p><strong>Price:</strong> R${house.price}</p>
+        <p>${house.description}</p>
+      `;
+    } else {
+      container.innerHTML = "<p>House not found</p>";
+    }
+  </script>
+
+</body>
+</html>

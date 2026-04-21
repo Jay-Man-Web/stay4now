@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+footer {
+  background: rgb(242, 242, 242);
+  padding: 30px;
+  img {
+    width: 100%;
+  }
+  p {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+  }
+  div{
+    margin: 10px 0;
+  }
+  div div {
+    width: 20px;
+    height: 20px;
+    display: inline-grid;
+    margin-right: 5px;
+  }
+  a {
+    text-decoration: none;
+  }
+}

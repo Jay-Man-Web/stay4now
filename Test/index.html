@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Homes</title>
+</head>
+<body>
+
+  <h1>Available Homes</h1>
+  <div id="list"></div>
+
+  <script>
+    const houses = [
+      { id: 1, title: "Modern Apartment", price: 1200 },
+      { id: 2, title: "Beach House", price: 2500 }
+    ];
+
+    const list = document.getElementById("list");
+
+    houses.forEach(house => {
+      const div = document.createElement("div");
+
+      div.innerHTML = `
+        <h3>${house.title}</h3>
+        <p>R${house.price}</p>
+        <button onclick="viewHouse(${house.id})">View</button>
+      `;
+
+      list.appendChild(div);
+    });
+
+    function viewHouse(id) {
+      // Redirect to new page with ID in URL
+      window.location.href = `house.html?id=${id}`;
+    }
+  </script>
+
+</body>
+</html>
