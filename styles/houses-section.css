@@ -37,7 +37,8 @@
 }
 
 .property-container:hover {
-  background: rgb(234, 206, 232);
+  /*background: rgb(234, 206, 232);*/
+  background: #8494ff64;
 }
 
 .property-container:hover {
@@ -67,4 +68,3 @@
   color: rgb(82, 82, 82);
   font-size: 15px;
 }
-

@@ -1,9 +1,11 @@
 import {houses} from "./houses.js";
+import { formatPrice } from "./utils.js";
 
 const searchInput = document.getElementById("searchInput");
 
 function displayResults(results, value){
   const container = document.getElementById("search-results-container");
+  const label = document.getElementById("search-result-label");
 
   if (results.length === 0) {
     document.getElementById("houses-section").style.display = "none";
@@ -11,14 +13,15 @@ function displayResults(results, value){
     return;
   }
 
-  let HTML = `<p>Results for "${value}"</p>`;
+  let labelHTML = `<p>Results for "${value}"</p>`;
+  let HTML = "";
 
   results.forEach(house => {
     const price = (house.priceCents / 100).toFixed(0);
 
     HTML += `
     <div>
-      <a href="../pages/home-details.html?id=${house.id}" class="search-result">
+      <a data-id="${house.id}" href="pages/home-details.html?id=${house.id}" class="search-result">
         <div class="result-thumbnail-container">
           <img class="result-thumbnail" src="images/home-thumbnails/${house.thumbnailID}.png" alt="no image" class="result-thumbnail">
         </div>
@@ -39,6 +42,7 @@ function displayResults(results, value){
   });
 
   document.getElementById("houses-section").style.display = "none";
+  label.innerHTML = labelHTML;
   container.innerHTML = HTML;
   searchInput.value = "";
 }
@@ -61,3 +65,10 @@ searchInput.addEventListener("keydown", function (event) {
   }
 });
 
+document.addEventListener("click", (e) => {
+  const card = e.target.closest(".search-result");
+  if (!card) return;
+
+  const id = card.dataset.id;
+  window.location.href = `pages/home-details.html?id=${id}`;
+});

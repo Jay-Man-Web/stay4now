@@ -33,6 +33,7 @@ header {
   max-height: 100px;
   opacity: 1;
   padding-top: 25px;
+  padding-bottom: 5px;
   transition: 
     max-height 0.3s ease,
     opacity 0.25s ease,
@@ -57,7 +58,8 @@ header {
 }
 
 .search-bar:focus {
-  box-shadow: 0 0 10px rgba(221, 86, 255, 0.319);
+  /*box-shadow: 0 0 10px rgba(221, 86, 255, 0.319);*/
+  box-shadow: 0 0 10px #6368ff8d;
   outline: none;
 }
 
@@ -85,8 +87,9 @@ header {
 }
 
 .tab-btn.active {
-  background: linear-gradient(white 75%, rgba(143, 2, 143, 0.547));
-  color: linear-gradient(black, white);
+  /*background: linear-gradient(white 75%, rgba(143, 2, 143, 0.547));*/
+  background: linear-gradient(white 80%, #6367FF);
+  color: black;
   font-size: 20px;
   padding: 9px 0;
 }
