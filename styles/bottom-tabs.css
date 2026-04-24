@@ -55,3 +55,15 @@
 .tab-page-content.active {
   display: block;
 }
+
+@media (width <= 375px) {
+  .bottom-tab {
+    padding: 5px 0 5px 0;
+    p {
+      font-size: 14px;
+    } 
+  }
+  .bottom-tab-icon {
+    width: 20px;
+  }
+}

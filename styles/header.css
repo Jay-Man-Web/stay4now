@@ -110,10 +110,14 @@ header {
 }
 
 
-/*Main Content*/
-
-main {
-  margin-top: 130px;
-  overflow-x: visible;
-  flex: 1;
+@media (width <= 375px) {
+  .search-bar-container {
+    padding-top: 10px;
+  }
+  .tab-btn {
+    font-size: 14px;
+  }
+  .tab-btn.tab-btn.active {
+    font-size: 16px;
+  }
 }
