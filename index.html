@@ -10,9 +10,11 @@
   <link rel="stylesheet" href="styles/houses-section.css">
   <link rel="stylesheet" href="styles/search-results.css">
   <link rel="stylesheet" href="styles/reviews-section.css">
+  <link rel="stylesheet" href="styles/bottom-tabs.css">
 </head>
+
 <body>
-  <header>
+  <header class="header">
     <div class="search-bar-container">
       <input class="search-bar" id="searchInput" type="text" placeholder="Have a place in mind?">
     </div>
@@ -30,85 +32,98 @@
   </header>
 
   <main>
-    <div id="search-results-label-container">
-      <div id="search-result-label">
+    <div id="discover-section" class="tab-page-content active" data-page-content="1">
+
+      <div id="search-results-label-container" class="tab-content">
+        <div id="search-result-label">
+        </div>
+        <div id="search-results-container">
+        </div>
       </div>
-      <div id="search-results-container">
-      </div>
+    
+      <section class="tab-content active" id="houses-section">
+        <div class="sub-section">
+          <div class="section-title-container">
+            <h2 class="section-title">
+              <a class="section-title-link" href="">
+                Popular Homes
+              </a>
+            </h2>
+          </div>
+          <div class="section-content" id="popular">
+          </div>
+        </div>
+
+        <div class="sub-section">
+          <div class="section-title-container">
+            <h2 class="section-title">
+              <a class="section-title-link" href="">
+                Luxury Experience
+              </a>
+            </h2>
+          </div>
+          <div class="section-content" id="luxury">
+            
+          </div>
+        </div>
+
+        <div class="sub-section">
+          <div class="section-title-container">
+            <h2 class="section-title">
+              <a class="section-title-link" href="">
+                Budget-friendly
+              </a>
+            </h2>
+          </div>
+          <div class="section-content" id="budget-friendly">
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="tab-content" id="reviews-section">
+        <h1 class="reviews-section-title">
+          Learn from others' experiences
+        </h1>
+        <div class="review">
+          <div>
+            <img src="" alt="">
+          </div>
+          <div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="tab-content" id="services-section">
+        <h1>Explore our Services</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur alias atque excepturi, ullam at fuga optio, omnis eius itaque fugiat deleniti dicta magnam a sit obcaecati nesciunt, aliquam harum vitae?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error molestiae omnis labore nulla, iste nemo vitae rem. Assumenda laudantium corrupti maxime in aut a repellat? Provident voluptatem excepturi quis Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum veniam possimus quo hic? Ipsum voluptatibus rem nisi corrupti, eum magni, non odio in ratione at hic quae adipisci et labore.</p>
+      </section>
+    </div>
+
+    <div id="favourites-section" class="tab-page-content" data-page-content="2">
+      <h1>My Favourites</h1>
+    </div>
+
+    <div id="profile-section" class="tab-page-content" data-page-content="3">
+      <h1>My Profile</h1>
     </div>
     
-    <section class="tab-content active" id="houses-section">
-      <div class="sub-section">
-        <div class="section-title-container">
-          <h2 class="section-title">
-            <a class="section-title-link" href="">
-              Popular Homes
-            </a>
-          </h2>
-        </div>
-        <div class="section-content" id="popular">
-          <!--
-          <div class="property-container">
-            <div class="property-thumbnail-container">
-              <img class="property-thumbnail" src="images/home-thumbnails/0001.png" alt="no image">
-            </div>
-            <div class="property-details-container">
-              <p class="property-label">
-                Hotel in Cape Town City Centre
-              </p>
-              <p class="property-price-rating">
-                R<span class="property-price">2,678</span> for 2 nights &middot;&starf; <span class="property-rating">4.6</span>
-              </p>
-            </div>
-          </div>
-          -->
-        </div>
-      </div>
 
-      <div class="sub-section">
-        <div class="section-title-container">
-          <h2 class="section-title">
-            <a class="section-title-link" href="">
-              Luxury Experience
-            </a>
-          </h2>
-        </div>
-        <div class="section-content" id="luxury">
-          
-        </div>
-      </div>
-
-      <div class="sub-section">
-        <div class="section-title-container">
-          <h2 class="section-title">
-            <a class="section-title-link" href="">
-              Budget-friendly
-            </a>
-          </h2>
-        </div>
-        <div class="section-content" id="budget-friendly">
-          
-        </div>
-      </div>
-    </section>
-
-    <section class="tab-content" id="reviews-section">
-      <h1 class="reviews-section-title">
-        Learn from others' experiences
-      </h1>
-      <div class="review">
-        <div>
-          <img src="" alt="">
-        </div>
-        <div>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="tab-content" id="services-section">
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur alias atque excepturi, ullam at fuga optio, omnis eius itaque fugiat deleniti dicta magnam a sit obcaecati nesciunt, aliquam harum vitae?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error molestiae omnis labore nulla, iste nemo vitae rem. Assumenda laudantium corrupti maxime in aut a repellat? Provident voluptatem excepturi quis Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum veniam possimus quo hic? Ipsum voluptatibus rem nisi corrupti, eum magni, non odio in ratione at hic quae adipisci et labore.</p>
-    </section>
+    <div class="bottom-tabs" >
+      <button class="bottom-tab active" data-page-content-tab="1">
+        <div class="bottom-tab-icon"><img src="images/icons/paper-plane.svg" alt=""></div>
+        <p>Discover</p>
+      </button>
+      <button class="bottom-tab" data-page-content-tab="2">
+        <div class="bottom-tab-icon"><img src="images/icons/favourite.svg" alt=""></div>
+        <p>Favourites</p>
+      </button>
+      <button class="bottom-tab" data-page-content-tab="3">
+        <div class="bottom-tab-icon"><img src="images/icons/profile.svg" alt=""></div>
+        <p>Profile</p>
+      </button>
+    </div>
   </main>
 
   <footer>

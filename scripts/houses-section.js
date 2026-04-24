@@ -30,10 +30,17 @@ function render() {
   let popularHTML = "";
 
   houses.forEach(house => {
-    if (house.rating >= 4) luxuryHTML += generateCard(house);
-    popularHTML += generateCard(house);
-    if (house.label.toLowerCase().includes("luxury") || (house.description.toLowerCase().includes("luxury"))) {luxuryHTML += generateCard(house)};
-    if (house.priceCents <= 150000) budgetHTML += generateCard(house);
+    const isLuxury =
+      house.rating >= 4 ||
+      house.label.toLowerCase().includes("luxury") ||
+      house.description.toLowerCase().includes("luxury");
+
+    const isPopular = house.rating >= 4.5;
+    const isBudget = house.priceCents <= 150000;
+
+    if (isLuxury) luxuryHTML += generateCard(house);
+    if (isPopular) popularHTML += generateCard(house);
+    if (isBudget) budgetHTML += generateCard(house);
   });
 
   popularContainer.innerHTML = popularHTML;
@@ -41,13 +48,13 @@ function render() {
   budgetContainer.innerHTML = budgetHTML;
 }
 
-// event delegation (clean navigation)
+// navigation
 document.addEventListener("click", (e) => {
   const card = e.target.closest(".property-container");
   if (!card) return;
 
   const id = card.dataset.id;
-  window.location.href = `pages/home-details.html?id=${id}`;
+  window.location.href = `pages/home-details.html?id=${id}`; // adjust if needed
 });
 
 render();

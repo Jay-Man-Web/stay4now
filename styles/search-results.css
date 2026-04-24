@@ -1,3 +1,16 @@
+#search-exit {
+  border: none;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background: #8494ffca;
+  transition: opacity 0.15s;
+}
+
+#search-exit:hover {
+  opacity: 0.75;
+}
+
 #search-result-label {
   padding: 20px 0 0 30px;
 }
@@ -30,7 +43,7 @@
 }
 
 .search-result:hover {
-  background: rgb(234, 206, 232);
+  background: #8494ff64;
 }
 
 .result-details {
