@@ -72,3 +72,37 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+@media (width <= 375px) {
+  #search-exit {
+    padding: 5px 15px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  #search-result-label {
+    padding: 10px 0 0 20px;
+    font-size: 14px;
+  }
+  #search-results-label-container {
+    margin-top: 100px;
+  }
+
+  .result-thumbnail-container {
+    width: 120px;
+    height: 120px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.312);
+
+  }
+
+  .result-label {
+    font-size: 14px;
+  }
+  .result-details {
+    font-size: 12px;
+  }
+  .search-result {
+    display: flex;
+    margin: -20px -20px 0 -20px;
+    height: 150px;
+  }
+}

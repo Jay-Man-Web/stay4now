@@ -58,15 +58,42 @@ footer {
   }
 }
 
-@media (width<=370) {
+.tab-page-content {
+  margin: 20px 0;
+  padding: 0 10px;
+}
+
+@media (width<=375px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
   .tab-content:nth-of-type(1) {
-    margin-top: 150px;
+    margin-top: 130px;
   }
 
   .tab-content:not(:nth-of-type(1)) {
     margin-top: 75px;
   }
   footer {
-    margin-bottom: 78px;
+    padding: 15px;
+    margin-bottom: 60px;
+    p {
+      font-size: 12px;
+    }
+    div{
+      margin: 8px 0;
+    }
+    div div {
+      width: 14px;
+      height: 14px;
+    }
+    a {
+      font-size: 12px;
+    }
   }
 }

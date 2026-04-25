@@ -1,14 +1,14 @@
 /* Houses Section */
 
 .sub-section {
-  margin-bottom: 65px;
+  margin-bottom: 30px;
   h2 {
     margin-left: 20px;
   }
 }
 
 .section-title-container {
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   a {
     text-decoration: none;
   }
@@ -58,6 +58,7 @@
 
 .property-details-container {
   margin-top: 10px;
+  padding: 0 5px;
 }
 
 .property-label {
@@ -67,4 +68,35 @@
 .property-price-rating {
   color: rgb(82, 82, 82);
   font-size: 15px;
+}
+
+
+@media (width <= 375px) {
+  h2 {
+    font-size: 18px;
+    margin-bottom: 1px;
+  }
+
+  .section-content {
+    padding: 0 10px;
+  }
+
+  .property-thumbnail-container {
+    width: 160px;
+    height: 160px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.312);
+  }
+
+  .property-container {
+    width: 160px;
+    padding: 5px;
+  }
+
+  .property-label {
+    font-size: 13px;
+  }
+
+  .property-price-rating {
+    font-size: 11px;
+  }
 }
