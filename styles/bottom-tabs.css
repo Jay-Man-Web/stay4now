@@ -58,12 +58,12 @@
 
 @media (width <= 375px) {
   .bottom-tab {
-    padding: 5px 0 10px 0;
+    padding: 2px 0;
     p {
-      font-size: 12px;
+      font-size: 10px;
     } 
   }
   .bottom-tab-icon {
-    width: 15px;
+    width: 10px;
   }
 }
