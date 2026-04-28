@@ -1,0 +1,105 @@
+:root {
+  --clr-midnight: #0A192F;
+  --clr-navy: #112240;
+  --clr-emerald: #10B981;
+  --clr-danger: #EF4444;
+  --clr-bg-main: #F8F9FA;
+  --clr-bg-card: #FFFFFF;
+  --clr-text-main: #0B192C;
+  --clr-text-muted: #6B7280;
+  --clr-border: #E5E7EB;
+  
+  --shadow-sm: 0 2px 8px rgba(10, 25, 47, 0.06);
+  --shadow-md: 0 8px 20px rgba(10, 25, 47, 0.12);
+  --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.2);
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  
+  --transition: all 0.2s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+html, body {
+  background-color: var(--clr-bg-main);
+  color: var(--clr-text-main);
+  min-height: 100vh; 
+  background-color: var(--clr-bg-main);
+  color: var(--clr-text-main);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 { color: var(--clr-midnight); }
+a { text-decoration: none; color: inherit; }
+img { width: 100%; height: 100%; object-fit: cover; }
+.hidden { display: none !important; }
+.text-muted { color: var(--clr-text-muted); }
+.text-danger { color: var(--clr-danger); }
+
+.content-padding {
+  padding: 120px 20px 40px 20px;
+}
+
+.icon-btn {
+  background: var(--clr-bg-card);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--clr-midnight);
+  transition: var(--transition);
+}
+
+.icon-btn:hover { background: var(--clr-border); }
+
+/* Modal Overlay Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(10, 25, 47, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 20px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal-content {
+  background: var(--clr-bg-card);
+  width: 100%;
+  max-width: 400px;
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  position: relative;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  animation: slideUp 0.3s ease-out;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 15px; right: 15px;
+  background: none; border: none;
+  font-size: 24px; cursor: pointer;
+  color: var(--clr-text-muted);
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }

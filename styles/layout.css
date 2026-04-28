@@ -1,0 +1,117 @@
+/* Header */
+.header {
+  position: fixed; top: 0; width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
+  z-index: 1000; padding: 15px 20px 0;
+}
+
+.search-bar-container { display: flex; justify-content: center; margin-bottom: 15px; }
+
+.search-bar {
+  width: 100%; max-width: 600px;
+  padding: 12px 20px; border-radius: 50px;
+  border: 1px solid var(--clr-border);
+  background: var(--clr-bg-main); font-size: 16px;
+  transition: var(--transition);
+}
+
+.search-bar:focus { outline: none; border-color: var(--clr-emerald); box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1); }
+
+.header-tabs {
+  display: flex; gap: 10px; overflow-x: auto; scrollbar-width: none;
+}
+.header-tabs::-webkit-scrollbar { display: none; }
+
+.tab-btn {
+  border: none; background: none; padding: 10px 15px;
+  font-size: 15px; color: var(--clr-text-muted); font-weight: 600;
+  cursor: pointer; border-bottom: 3px solid transparent; white-space: nowrap;
+}
+.tab-btn.active { color: var(--clr-midnight); border-bottom: 3px solid var(--clr-midnight); }
+
+/* Bottom Nav */
+.bottom-nav {
+  position: fixed; width: 100%; bottom: 0; 
+  background: var(--clr-bg-card); border-top: 1px solid var(--clr-border);
+  display: flex; justify-content: space-around; padding: 10px 0 20px; z-index: 1000;
+}
+
+.bottom-tab {
+  background: none; border: none; display: flex; flex-direction: column;
+  align-items: center; gap: 4px; color: var(--clr-text-muted); cursor: pointer;
+}
+.bottom-tab p { font-size: 12px; font-weight: 600; }
+.bottom-tab.active { color: var(--clr-emerald); }
+
+/* Footer */
+.site-footer {
+  background: var(--clr-bg-main); 
+  padding: 30px 20px 30px; /* Standardized padding */
+  border-top: 1px solid var(--clr-border); 
+  margin-top: auto;
+  
+  /* THIS is the magic line. It creates a spacer at the bottom of the page 
+     equal to the height of your fixed bottom navigation bars so they never overlap. */
+  margin-bottom: 85px; 
+}
+
+.footer-settings { display: flex; gap: 20px; margin-bottom: 20px; font-weight: 600; }
+.footer-legal { border-top: 1px solid var(--clr-border); padding-top: 20px; font-size: 14px; color: var(--clr-text-muted); }
+.legal-links { margin-top: 5px; }
+
+@media (min-width: 768px) {
+  /* I completely removed the rule that was hiding your .bottom-nav here! */
+  .bottom-nav {
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.05);
+  }
+}
+
+/* Update header tabs to center them */
+.header-tabs.centered {
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Filter Panel Styles */
+.filter-container {
+  padding: 15px 0;
+  border-top: 1px solid var(--clr-border);
+  animation: slideDown 0.2s ease-out;
+}
+
+.filter-group {
+  display: flex;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.filter-input {
+  flex: 1;
+  min-width: 120px;
+  padding: 10px 15px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--clr-border);
+  font-size: 14px;
+}
+
+.filter-input:focus {
+  outline: none;
+  border-color: var(--clr-emerald);
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  flex-shrink: 0;
+}
+
+@keyframes slideDown { 
+  from { transform: translateY(-10px); opacity: 0; } 
+  to { transform: translateY(0); opacity: 1; } 
+}

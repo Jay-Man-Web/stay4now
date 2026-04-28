@@ -1,5 +1,6 @@
 export function formatPrice(cents) {
-  return `R${(cents / 100).toFixed(2)}`;
+  // Adds commas for readability (e.g., R1,850.00)
+  return `R${(cents / 100).toLocaleString('en-ZA', { minimumFractionDigits: 2 })}`;
 }
 
 export function encodeLocation(location) {
